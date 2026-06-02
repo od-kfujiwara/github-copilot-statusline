@@ -1,5 +1,5 @@
 # github-copilot-statusline
-GitHub Copilot CLI の statusline に、Premium Requests の消費状況と消費ペースガイドを表示するカスタム statusline です。
+GitHub Copilot CLI の statusline に、AI credits の消費状況と消費ペースガイドを表示するカスタム statusline です。
 
 「今月あとどれくらい使ってよさそうか」を CLI 上でざっくり把握できるようにします。
 
@@ -111,7 +111,7 @@ Copilot CLI 上で `/statusline` を実行します。
 /restart
 ```
 
-再起動後、Copilot CLI で一度チャットを送信すると、statusline に Premium Requests の消費状況が表示されます。
+再起動後、Copilot CLI で一度チャットを送信すると、statusline に AI credits の消費状況が表示されます。
 
 ## Pacing status
 
