@@ -112,7 +112,7 @@ def render_statusline(quota):
     return (
         f"{color}⚡ {usage_bar} "
         f"{total_used}/{monthly_limit} ({used_percentage:.1f}%) │ "
-        f"{cycle['days_remaining']}d left │ pace guide:{daily_budget:.0f} req/day │ {pace_badge}"
+        f"{cycle['days_remaining']}d left │ pace guide:{daily_budget:.0f} credits/day │ {pace_badge}"
         f"{ANSI_RESET}"
     )
 
