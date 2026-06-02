@@ -8,24 +8,24 @@ GitHub Copilot CLI の statusline に、Premium Requests の消費状況と消�
 ````
 
 ## Features
-* Premium Requests の使用量を statusline に表示
-* 使用済みリクエスト数と使用率を表示
+* 割り当てられた AI credits の使用量を statusline に表示
+* 使用済み AI credits と使用率を表示
 * 次回リセット日までの残り日数を表示
-* 残りリクエスト数から 1 日あたりの目安消費量を表示
+* 残りの AI credits 数から 1 日あたりの目安消費量を表示
 * 消費ペースに応じて `CHILL` / `CAUTION` / `DANGER` を色付きで表示
 
 ## Display example
 
 ```text
-⚡ ███░░░░░░░░░ 36/300 (12.0%) │ 26d left │ pace guide:10 req/day │ CHILL
+⚡ ███░░░░░░░░░ 360/3000 (12.0%) │ 26d left │ pace guide:10 credits/day │ CHILL
 ```
 
 | 表示                      | 内容                    |
 | ----------------------- | --------------------- |
-| `36/300`                | 使用済みリクエスト数 / 月間上限     |
+| `360/3000`                | 使用済み AI credits 数 / 割り当てられた月間上限     |
 | `12.0%`                 | 使用率                   |
 | `26d left`              | 次回リセット日までの残り日数        |
-| `pace guide:10 req/day` | 月末まで均等に使う場合の 1 日あたり目安 |
+| `pace guide:10 credis/day` | 月末まで均等に使う場合の 1 日あたり目安 |
 | `CHILL / CAUTION / DANGER` | 消費ペースステータス     |
 
 ## Requirements
@@ -34,10 +34,6 @@ GitHub Copilot CLI の statusline に、Premium Requests の消費状況と消�
 * Python 3
 * Bash
 * GitHub Copilot CLI の experimental features が有効であること
-
-> [!NOTE]
-> この statusline は、GitHub Copilot CLI の Premium Requests 情報をもとに表示しています。
-> 2026年6月以降は動作しません。
 
 ## Installation
 
@@ -130,15 +126,6 @@ Copilot CLI 上で `/statusline` を実行します。
 ```python
 WARNING_PACE_RATIO = 1.4
 ```
-
-
-
-## Notes
-
-GitHub Copilot は 2026 年 6 月 1 日から usage-based billing へ移行予定です。
-このリポジトリは Premium Requests ベースの表示を前提としているため、GitHub Copilot 側の仕様変更により動作しなくなる可能性があります。
-
-今後、GitHub AI Credits ベースの情報が Copilot CLI から取得できるようになった場合は、対応を検討します。
 
 ## Related article
 zennで記事を公開しています。
